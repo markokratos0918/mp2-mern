@@ -5,14 +5,31 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import Register from "./pages/Register";
+import Login from "./pages/Login.jsx";
+import Single from "./pages/Single";
+import Home from "./pages/Home";
+import Write from "./pages/Write";
 
 const router = createBrowserRouter([{
    path: "/",
    element:<div>Home Page</div>
 },
 {
-  path: "/test",
-  element:<div>Home Test</div>
+  path: "/Register",
+  element:<Register/>,
+},
+{
+  path: "/Login",
+  element:<Login/>,
+},
+{
+  path: "/Single",
+  element:<Single/>,
+},
+{
+  path: "/Write",
+  element:<Write/>,
 },
 ]);
 
