@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import "./style.scss";
 
 
 const Layout = () => {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/Single",
+        path: "/post/:id",
         element: <Single />,
       },
       {
@@ -53,10 +54,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return (   
-      <div>
+  return (
+    <div className="app">
+      <div className="containers">
         <RouterProvider router={router} />
       </div>
+    </div>     
   );
 }
 
